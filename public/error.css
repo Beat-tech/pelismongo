@@ -1,0 +1,13 @@
+body {
+  background-color: lightslategray;
+  font-family: "Roboto Mono", monospace;
+}
+#unicornio {
+  width: 200px;
+  margin-left: 100vh;
+}
+#div {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}

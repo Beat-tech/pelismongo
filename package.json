@@ -1,0 +1,27 @@
+{
+  "name": "pelis_api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "films.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.1",
+    "pug": "^3.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Beat-tech/Pelis_api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Beat-tech/Pelis_api/issues"
+  },
+  "homepage": "https://github.com/Beat-tech/Pelis_api#readme"
+}

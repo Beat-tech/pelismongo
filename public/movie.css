@@ -1,0 +1,51 @@
+html {
+  font-family: "Roboto Mono", monospace;
+}
+body {
+  background-color: lightslategray;
+}
+
+#div {
+  background-color: goldenrod;
+  width: 70vh;
+  text-align: center;
+  padding-bottom: 10px;
+  padding-top: 40px;
+  margin-left: 30vw;
+}
+
+#botonesmovie {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+
+#boton3 {
+  border-style: none;
+  background-color: rosybrown;
+  width: 80px;
+  height: 30px;
+  border-radius: 4px;
+  margin: 7px;
+  font-family: "Roboto Mono", monospace;
+  color: rgb(31, 42, 22);
+  display: flex;
+  margin-left: 100px;
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+
+#botonHome {
+  border-style: none;
+  background-color: rosybrown;
+  width: 80px;
+  height: 30px;
+  border-radius: 4px;
+  margin: 7px;
+  font-family: "Roboto Mono", monospace;
+  color: rgb(31, 42, 22);
+  display: flex;
+  margin-left: 170px;
+  margin-top: 40px;
+  margin-bottom: 60px;
+}

@@ -1,0 +1,91 @@
+html {
+  font-family: "Roboto Mono", monospace;
+}
+
+body {
+  background-color: lightslategrey;
+  width: 800px;
+}
+h1 {
+  /* display: flex; */
+
+  color: rgb(31, 42, 22);
+}
+#data {
+  margin: 200px;
+  margin-top: 50px;
+  background-color: goldenrod;
+
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 6px;
+
+  width: 72vw;
+}
+p.enunciados {
+  color: rgb(31, 42, 22);
+}
+
+#boton,
+#boton2 {
+  background-color: rgba(141, 64, 113, 0.4);
+  border-radius: 6px;
+  font-family: "Roboto Mono", monospace;
+  color: rgb(31, 42, 22);
+  border-style: none;
+}
+#boton {
+  margin-right: 100px;
+  padding: 10px;
+}
+
+#boton2 {
+  margin-left: 450px;
+}
+
+#peticion {
+  border-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rosybrown;
+  padding: 10px;
+  border-radius: 6px;
+  width: 220px;
+}
+.tarjeta {
+  margin: 50px;
+}
+#cabecero {
+  position: relative;
+  top: 10px;
+  left: 40vw;
+}
+
+#botones {
+  display: flex;
+  flex-direction: row;
+  margin-left: 820px;
+}
+
+.botonHome {
+  border-style: none;
+  background-color: rosybrown;
+  width: 75px;
+  height: 25px;
+  border-radius: 4px;
+  margin: 7px;
+  font-family: "Roboto Mono", monospace;
+  color: rgb(31, 42, 22);
+}
+
+#imgPalomitas {
+  width: 100px;
+}
+
+#foto {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
