@@ -11,6 +11,7 @@
 const express = require("express");
 const films = require(`./films`);
 const bodyParser = require("body-parser");
+const bbdd = require(`./bbdd`);
 const app = express();
 
 const port = 3000;
@@ -31,11 +32,17 @@ app.get("/formulario", films.formulario);
 app.get("/film/:titulo", films.getfilms);
 app.get("/film/detalle/:i", films.getDetail);
 app.get("/film/edit/:i", films.edit);
-app.get("*", films.geterror);
-app.post("/submit-form", function (req, res) {
-  res.render("home");
-  // res.send(req.body);
+
+app.get("/pruebas", (req, res) => {
+  bbdd
+    .getMovie("John")
+    .then((datos) => console.log(datos))
+    .catch((e) => console.log("ocurrió un error:" + e));
+  res.send("Hello World!");
 });
+
+app.get("*", films.geterror);
+app.post("/submit-form", films.saveFilm);
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });

@@ -62,3 +62,14 @@ exports.geterror = (req, res) => {
     mensaje2: 404,
   });
 };
+
+exports.saveFilm = (req, res) => {
+  var peli = req.body;
+  console.log(req.body);
+  //guardar en BBDD
+  // llama a bbdd.createMovie(peli)
+  //....
+
+  res.render("home");
+  // res.send(req.body);
+};
