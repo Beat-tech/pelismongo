@@ -1,4 +1,5 @@
 const fetch = require("node-fetch");
+const bbdd = require("./bbdd");
 exports.gethome = (req, res) => {
   res.render("home.pug", { hache1: "Pelis favos" });
 }; // Se muestra la plantilla hello.pug
@@ -62,14 +63,13 @@ exports.geterror = (req, res) => {
     mensaje2: 404,
   });
 };
-
+//martin es el mejor
 exports.saveFilm = (req, res) => {
   var peli = req.body;
   console.log(req.body);
   //guardar en BBDD
-  // llama a bbdd.createMovie(peli)
-  //....
-
-  res.render("home");
+  bbdd.createMovie(peli);
+  res.status(200).redirect("/");
+  // res.render("home");
   // res.send(req.body);
 };

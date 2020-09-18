@@ -7,18 +7,18 @@ var url = "mongodb://localhost:27017";
 //Create
 
 const connect = async () => {
-  const film = await MongoClient.connect(url, {
+  const client = await MongoClient.connect(url, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   }).catch((err) => {
     console.log(err);
   });
-  return film;
+  return client;
 };
 
 exports.createMovie = async (newListing) => {
-  const film = await connect();
-  const result = await film
+  const client = await connect();
+  const result = await client
     .db("movies")
     .collection("favorites")
     .insertOne(newListing);
