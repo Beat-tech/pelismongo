@@ -5,16 +5,19 @@ html
     link(rel='shortcut icon', href='../img/cine.svg', type='image/x-icon')
     link(rel="stylesheet", href="home.css")
   body
-    div#cabecero
-      h1= hache1
-      input(type="text" id="peticion") 
-      br 
-      br
-    div#botones
-      input(type="button", value="Ver detalles" id="boton")
-      br
-      br
-      input(type="button", value="Añade una nueva peli" id="boton2")
+    div#nav
+      div#titulo
+        img(src="img/ar-camera.png", id="imgcamera")
+        h1= hache1
+      div#cabecero
+        input(type="text" id="peticion") 
+        br 
+        br
+      div#botones
+        input(type="image", src= "img/lupa.png", id="boton")
+        br
+        br
+        input(type="button", value="¿No encuentras lo que buscas?" id="boton2")
     div(id="data")      
     script(src="script.js")
     

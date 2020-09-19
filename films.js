@@ -63,7 +63,7 @@ exports.geterror = (req, res) => {
     mensaje2: 404,
   });
 };
-//martin es el mejor
+
 exports.saveFilm = (req, res) => {
   var peli = req.body;
   console.log(req.body);

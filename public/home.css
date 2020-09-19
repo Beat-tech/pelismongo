@@ -3,18 +3,19 @@ html {
 }
 
 body {
-  background-color: lightslategrey;
+  background-color: beige;
   width: 800px;
 }
 h1 {
   /* display: flex; */
 
   color: rgb(31, 42, 22);
+  margin-top: 1vh;
 }
 #data {
   margin: 200px;
-  margin-top: 50px;
-  background-color: goldenrod;
+  margin-top: 5px;
+  background-color: rgb(233, 185, 65);
 
   padding: 50px;
   display: flex;
@@ -26,22 +27,42 @@ h1 {
 p.enunciados {
   color: rgb(31, 42, 22);
 }
+#titulo {
+  display: flex;
+  flex-direction: row;
+  /* background-color: rgb(190, 165, 165); */
+  margin-left: 200px;
+  border-radius: 6px;
+  width: 77.2vw;
+}
+#imgcamera {
+  width: 72px;
+}
+#cabecero {
+}
 
-#boton,
 #boton2 {
-  background-color: rgba(141, 64, 113, 0.4);
+  background-color: rgba(141, 64, 113, 0.5);
   border-radius: 6px;
   font-family: "Roboto Mono", monospace;
   color: rgb(31, 42, 22);
   border-style: none;
+  margin-left: 250px;
+  margin-right: 240px;
+  margin-top: -70px;
+  padding: 10px;
 }
 #boton {
   margin-right: 100px;
   padding: 10px;
-}
 
-#boton2 {
-  margin-left: 450px;
+  background-color: rosybrown;
+
+  font-family: "Roboto Mono", monospace;
+  color: rgb(31, 42, 22);
+  border-style: none;
+  height: 17px;
+  margin-top: 3vh;
 }
 
 #peticion {
@@ -51,22 +72,11 @@ p.enunciados {
   justify-content: center;
   background-color: rosybrown;
   padding: 10px;
-  border-radius: 6px;
-  width: 220px;
+  width: 480px;
+  margin-top: 3vh;
 }
 .tarjeta {
   margin: 50px;
-}
-#cabecero {
-  position: relative;
-  top: 10px;
-  left: 40vw;
-}
-
-#botones {
-  display: flex;
-  flex-direction: row;
-  margin-left: 820px;
 }
 
 .botonHome {
@@ -80,12 +90,9 @@ p.enunciados {
   color: rgb(31, 42, 22);
 }
 
-#imgPalomitas {
-  width: 100px;
-}
-
-#foto {
+#nav {
+  background-color: rgb(151, 163, 173);
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
+  height: 10vh;
+  width: 100vw;
 }
