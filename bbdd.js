@@ -30,8 +30,8 @@ exports.createMovie = async (newListing) => {
 //Read
 
 exports.getMovie = async (nombre) => {
-  const film = await connect();
-  result = await film
+  const client = await connect();
+  result = await client
     .db("movies")
     .collection("favorites")
     .findOne({ title: nombre });
@@ -41,6 +41,18 @@ exports.getMovie = async (nombre) => {
     return result;
   } else {
     console.log(`No listings found with the name '${nombre}'`);
+    return null;
+  }
+};
+
+// Esto debe leerse en la Home
+exports.getFilmsDetail = async () => {
+  const client = await connect();
+  result = await client.db("movies").collection("favorites").find().toArray();
+  console.log(result);
+  if (result) {
+    return result;
+  } else {
     return null;
   }
 };

@@ -15,7 +15,7 @@ h1 {
 #data {
   margin: 200px;
   margin-top: 5px;
-  background-color: rgb(233, 185, 65);
+  background-color: rgb(233, 185, 65, 0.7);
 
   padding: 50px;
   display: flex;
@@ -42,12 +42,12 @@ p.enunciados {
 }
 
 #boton2 {
-  background-color: rgba(141, 64, 113, 0.5);
+  background-color: rgb(151, 163, 173);
   border-radius: 6px;
   font-family: "Roboto Mono", monospace;
   color: rgb(31, 42, 22);
   border-style: none;
-  margin-left: 250px;
+  margin-left: 290px;
   margin-right: 240px;
   margin-top: -70px;
   padding: 10px;
@@ -56,7 +56,7 @@ p.enunciados {
   margin-right: 100px;
   padding: 10px;
 
-  background-color: rosybrown;
+  background-color: rgb(31, 42, 22, 0.5);
 
   font-family: "Roboto Mono", monospace;
   color: rgb(31, 42, 22);
@@ -70,7 +70,7 @@ p.enunciados {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: rosybrown;
+  background-color: rgb(31, 42, 22, 0.5);
   padding: 10px;
   width: 480px;
   margin-top: 3vh;
@@ -81,18 +81,39 @@ p.enunciados {
 
 .botonHome {
   border-style: none;
-  background-color: rosybrown;
-  width: 75px;
-  height: 25px;
+  background-color: rgb(226, 197, 119);
+  width: 16px;
+  height: 16px;
+
   border-radius: 4px;
-  margin: 7px;
+  display: flex;
+  align-items: baseline;
+  margin: 6.5px;
   font-family: "Roboto Mono", monospace;
-  color: rgb(31, 42, 22);
+  color: black;
+}
+
+#botonsHome {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }
 
 #nav {
   background-color: rgb(151, 163, 173);
+
   display: flex;
   height: 10vh;
   width: 100vw;
+}
+.pelifav {
+  margin: 40px;
+  background-color: (226, 197, 119);
+  display: flex;
+  flex-direction: column;
+  padding: 2vw;
+  border-radius: 6px;
+  width: 15vw;
+  border-style: solid;
+  border-color: rgb(31, 42, 22, 0.2);
 }

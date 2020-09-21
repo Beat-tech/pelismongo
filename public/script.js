@@ -45,19 +45,19 @@ function editar(i) {
 // }
 // onclick="detalle('${nuevaPelicula[i].Title}')"
 
-function renderMovies() {
-  let nuevaPelicula = JSON.parse(localStorage.getItem("Películas"));
-  for (let i = 0; i < nuevaPelicula.length; i++) {
-    let data = `<div class="tarjeta">
-        <p class= "enunciados">Título: ${nuevaPelicula[i].Title} </p>
-        <p class= "enunciados"> Director: ${nuevaPelicula[i].Director} </p>
-        <p class= "enunciados"> Año: ${nuevaPelicula[i].Year} </p>
-        <input type="button" value= "Borrar" class="botonHome" id="botonB${i}" onclick="borrarMovie('${nuevaPelicula[i].Title}')">
-        <input type="button" value= "Editar" class="botonHome" id="botonE${i}" onclick="editar('${i}')" >
-        <input type="button" value= "Detalle" class="botonHome"  id="botonD${i}" onclick="detalles('${i}')">
-        </div>`;
+// function renderMovies() {
+//   let nuevaPelicula = JSON.parse(localStorage.getItem("Películas"));
+//   for (let i = 0; i < nuevaPelicula.length; i++) {
+//     let data = `<div class="tarjeta">
+//         <p class= "enunciados">Título: ${nuevaPelicula[i].Title} </p>
+//         <p class= "enunciados"> Director: ${nuevaPelicula[i].Director} </p>
+//         <p class= "enunciados"> Año: ${nuevaPelicula[i].Year} </p>
+//         <input type="button" value= "Borrar" class="botonHome" id="botonB${i}" onclick="borrarMovie('${nuevaPelicula[i].Title}')">
+//         <input type="button" value= "Editar" class="botonHome" id="botonE${i}" onclick="editar('${i}')" >
+//         <input type="button" value= "Detalle" class="botonHome"  id="botonD${i}" onclick="detalles('${i}')">
+//         </div>`;
 
-    document.getElementById("data").innerHTML += data;
-  }
-}
-if (document.getElementById("data") != null) renderMovies();
+//     document.getElementById("data").innerHTML += data;
+//   }
+// }
+// if (document.getElementById("data") != null) renderMovies();
