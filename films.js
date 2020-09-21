@@ -10,6 +10,16 @@ exports.gethome = async (req, res) => {
   });
 };
 
+exports.saveFilm = (req, res) => {
+  var peli = req.body;
+
+  //guardar en BBDD
+  bbdd.createMovie(peli);
+  res.status(200).redirect("/");
+  // res.render("home");
+  // res.send(req.body);
+};
+
 exports.getDetail = (req, res) => {
   // console.log(req);
   res.render("movie.pug", {
@@ -68,14 +78,4 @@ exports.geterror = (req, res) => {
     mensaje: "Shhh! Unicornio durmiendo...",
     mensaje2: 404,
   });
-};
-
-exports.saveFilm = (req, res) => {
-  var peli = req.body;
-  console.table(req.body);
-  //guardar en BBDD
-  bbdd.createMovie(peli);
-  res.status(200).redirect("/");
-  // res.render("home");
-  // res.send(req.body);
 };
