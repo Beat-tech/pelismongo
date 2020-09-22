@@ -20,6 +20,12 @@ exports.saveFilm = (req, res) => {
   // res.send(req.body);
 };
 
+exports.deleteFilm = (req, res) => {
+  console.log("borrao");
+  var peli = req.body.title;
+  bbdd.deleteMovie(peli);
+};
+
 exports.getDetail = (req, res) => {
   // console.log(req);
   res.render("movie.pug", {

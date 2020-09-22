@@ -49,7 +49,7 @@ exports.getMovie = async (nombre) => {
 exports.getFilmsDetail = async () => {
   const client = await connect();
   result = await client.db("movies").collection("favorites").find().toArray();
-  console.log(result);
+  console.log("se cargan todas las pelis");
   if (result) {
     return result;
   } else {
@@ -71,10 +71,12 @@ exports.setMovie = async (nameOfListing, updatedListing) => {
 };
 
 //Delete
-exports.deleteMovie = async (film, nameOfListing) => {
-  result = await film
+exports.deleteMovie = async (nameOfListing) => {
+  console.log(nameOfListing);
+  const client = await connect();
+  const result = await client
     .db("movies")
     .collection("favorites")
-    .deleteOne({ name: nameOfListing });
+    .deleteOne({ Title: nameOfListing });
   console.log(`${result.deletedCount} document(s) was/were deleted.`);
 };

@@ -12,16 +12,30 @@ function redireccionar2() {
 if (document.getElementById("boton2") != null)
   document.getElementById("boton2").addEventListener("click", redireccionar2);
 
-function borrarMovie(titulo) {
-  let misPelis = JSON.parse(localStorage.getItem("Películas"));
+function borrarMovie(pelicula) {
+  fetch("/delete", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json;charset=utf-8",
+    },
+    body: JSON.stringify({ title: pelicula }),
+  })
+    .then((datos) => {
+      location.reload();
+    })
+    .catch((e) => {
+      console.log("Ocurrió un error:" + e);
+    });
 
-  for (let i = 0, j = misPelis.length; i < j; i++) {
-    if (misPelis[i].Title === titulo) {
-      misPelis.splice(i, 1);
-    }
-    localStorage.setItem("Películas", JSON.stringify(misPelis));
-    location.reload();
-  }
+  // let misPelis = JSON.parse(localStorage.getItem("Películas"));
+
+  // for (let i = 0, j = misPelis.length; i < j; i++) {
+  //   if (misPelis[i].Title === titulo) {
+  //     misPelis.splice(i, 1);
+  //   }
+  //   localStorage.setItem("Películas", JSON.stringify(misPelis));
+  //   location.reload();
+  // }
 }
 
 function detalles(i) {

@@ -43,6 +43,7 @@ app.get("/pruebas", (req, res) => {
 
 app.get("*", films.geterror);
 app.post("/submit-form", films.saveFilm);
+app.post("/delete", films.deleteFilm);
 //crear ruta nueva de post para borrar, el fetch envía
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);

@@ -21,15 +21,15 @@ html
     div(id="data") 
        each film in favorites
         div.pelifav
-          div#pelifav2
-            div#pelifav3
+          div.pelifav2
+            div.pelifav3
               p=film.Title
               p=film.Director
               p=film.Year
             div  
-              img#poster(src=film.Poster)
+              img.poster(src=film.Poster)
           div#botonsHome
-            input.botonHome(type="image", src= "img/bin.png", id='botonB${i}' onclick="borrarMovie('${nuevaPelicula[i].Title}')")
+            input.botonHome(type="image", src= "img/bin.png", id='botonB${i}' onclick="borrarMovie('"+film.Title+"')")
             input.botonHome(type="image", src= "img/pluma.png", id='botonE${i}' onclick="editar('${i}')")
             input.botonHome(type="image", src= "img/ojo.png", id='botonD${i}' onclick="detalles('${i}')") 
           

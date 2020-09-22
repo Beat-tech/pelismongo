@@ -25,7 +25,7 @@ function guardar() {
     body: JSON.stringify(nuevaPelicula2),
   })
     .then((datos) => {
-      res.send("User encontrado");
+      location.replace("/");
     })
     .catch((e) => console.log("Ocurrió un error:" + e));
 
