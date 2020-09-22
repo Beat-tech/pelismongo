@@ -34,7 +34,7 @@ exports.getMovie = async (nombre) => {
   result = await client
     .db("movies")
     .collection("favorites")
-    .findOne({ title: nombre });
+    .findOne({ Title: nombre });
   console.log(result);
   if (result) {
     console.log(`Found a listing in the collection with the name '${nombre}':`);

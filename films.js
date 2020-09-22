@@ -33,17 +33,22 @@ exports.deleteFilm = (req, res) => {
 };
 
 exports.getDetail = (req, res) => {
-  // console.log(req);
-  res.render("movie.pug", {
-    Title: req.query.titulo,
-    Year: req.query.year,
-    Director: req.query.director,
-    Actors: req.query.actors,
-    Genre: req.query.genre,
-    Awards: req.query.awards,
-    Runtime: req.query.runtime,
-    Poster: req.query.poster,
-  });
+  var peli = req.params.titulo;
+  bbdd
+    .getMovie(peli)
+    .then((datos) => {
+      res.render("movie.pug", {
+        Title: datos.Title,
+        Year: datos.Year,
+        Director: datos.Director,
+        Actors: datos.Actors,
+        Genre: datos.Genre,
+        Awards: datos.Awards,
+        Runtime: datos.Runtime,
+        Poster: datos.Poster,
+      });
+    })
+    .catch((e) => console.log(e));
 };
 
 exports.edit = (req, res) => {

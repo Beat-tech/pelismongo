@@ -30,7 +30,7 @@ app.get("/home", films.gethome);
 app.get("/", films.gethome);
 app.get("/formulario", films.formulario);
 app.get("/film/:titulo", films.getfilms);
-app.get("/film/detalle/:i", films.getDetail);
+app.get("/film/detalle/:titulo", films.getDetail);
 app.get("/film/edit/:i", films.edit);
 
 app.get("/pruebas", (req, res) => {

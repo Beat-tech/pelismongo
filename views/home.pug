@@ -30,8 +30,8 @@ html
               img.poster(src=film.Poster)
           div#botonsHome
             input.botonHome(type="image", src= "img/bin.png", id='botonB${i}' onclick="borrarMovie('"+film.Title+"')")
-            input.botonHome(type="image", src= "img/pluma.png", id='botonE${i}' onclick="editar('${i}')")
-            input.botonHome(type="image", src= "img/ojo.png", id='botonD${i}' onclick="detalles('${i}')") 
+            input.botonHome(type="image", src= "img/pluma.png", id='botonE${i}' onclick="editar('"+film.Title+"')")
+            input.botonHome(type="image", src= "img/ojo.png", id='botonD${i}' onclick="detalles('"+film.Title+"')") 
           
     script(src="script.js")
     
