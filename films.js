@@ -23,7 +23,13 @@ exports.saveFilm = (req, res) => {
 exports.deleteFilm = (req, res) => {
   console.log("borrao");
   var peli = req.body.title;
-  bbdd.deleteMovie(peli);
+  bbdd
+    .deleteMovie(peli)
+    .then((datos) => {
+      console.log(datos);
+      res.send();
+    })
+    .catch((e) => console.log(e));
 };
 
 exports.getDetail = (req, res) => {
