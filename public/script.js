@@ -33,10 +33,7 @@ function detalles(titulo) {
   location.replace(url);
 }
 
-function editar(i) {
-  let arr3 = JSON.parse(localStorage.getItem("Películas"));
-
-  location.replace(
-    `/film/edit/${i}?titulo=${arr3[i].Title}&year=${arr3[i].Year}&director=${arr3[i].Director}&genre=${arr3[i].Genre}&awards=${arr3[i].Awards}&runtime=${arr3[i].Runtime}`
-  );
+function editar(titulo) {
+  let url = `/film/edit/${titulo}`;
+  location.replace(url);
 }

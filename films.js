@@ -52,16 +52,30 @@ exports.getDetail = (req, res) => {
 };
 
 exports.edit = (req, res) => {
-  res.render("formulario.pug", {
-    Título: req.query.titulo,
-    Director: req.query.director,
-    Year: req.query.year,
-    Actors: req.query.actors,
-    Genre: req.query.genre,
-    Awards: req.query.awards,
-    Runtime: req.query.runtime,
-  });
+  var peli = req.params.titulo;
+  bbdd
+    .getMovie(peli)
+    .then((datos) => {
+      res.render("formulario.pug", {
+        rutaPost: "/edit",
+        Title: datos.Title,
+        Year: datos.Year,
+        Director: datos.Director,
+        Actors: datos.Actors,
+        Genre: datos.Genre,
+        Awards: datos.Awards,
+        Runtime: datos.Runtime,
+        Poster: datos.Poster,
+      });
+    })
+    .catch((e) => console.log(e));
 };
+
+// ​exports.update = (req, res) => {
+//   var peli = req.titulo;
+//   bbdd.setMovie(peli);
+// };
+
 exports.getfilms = (req, res) => {
   let titulo = req.params.titulo;
   fetch(`http://www.omdbapi.com/?apikey=fbc7a715&t=${titulo}`)
@@ -85,7 +99,7 @@ exports.getfilms = (req, res) => {
     });
 };
 exports.formulario = (req, res) => {
-  res.render("formulario", {});
+  res.render("formulario", { rutaPost: "/submit-form" });
 };
 
 // exports.postFormulario = ()

@@ -31,20 +31,13 @@ app.get("/", films.gethome);
 app.get("/formulario", films.formulario);
 app.get("/film/:titulo", films.getfilms);
 app.get("/film/detalle/:titulo", films.getDetail);
-app.get("/film/edit/:i", films.edit);
-
-app.get("/pruebas", (req, res) => {
-  bbdd
-    .getMovie("John")
-    .then((datos) => console.log(datos))
-    .catch((e) => console.log("ocurrió un error:" + e));
-  res.send("Hello World!");
-});
+app.get("/film/edit/:titulo", films.edit);
 
 app.get("*", films.geterror);
 app.post("/submit-form", films.saveFilm);
 app.post("/delete", films.deleteFilm);
-//crear ruta nueva de post para borrar, el fetch envía
+app.post("/edit");
+
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
