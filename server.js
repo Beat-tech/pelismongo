@@ -36,7 +36,7 @@ app.get("/film/edit/:titulo", films.edit);
 app.get("*", films.geterror);
 app.post("/submit-form", films.saveFilm);
 app.post("/delete", films.deleteFilm);
-app.post("/edit");
+app.post("/edit", films.postUpdate);
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);

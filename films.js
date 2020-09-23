@@ -56,8 +56,9 @@ exports.edit = (req, res) => {
   bbdd
     .getMovie(peli)
     .then((datos) => {
-      res.render("formulario.pug", {
+      res.render("formulario", {
         rutaPost: "/edit",
+        id: datos._id,
         Title: datos.Title,
         Year: datos.Year,
         Director: datos.Director,
@@ -71,10 +72,18 @@ exports.edit = (req, res) => {
     .catch((e) => console.log(e));
 };
 
-// ​exports.update = (req, res) => {
-//   var peli = req.titulo;
-//   bbdd.setMovie(peli);
-// };
+exports.postUpdate = (req, res) => {
+  var id = req.body.id;
+  console.log(id);
+  bbdd
+    .setMovie(id, req.body)
+    .then((datos) => {
+      console.log("documentos cambiados: " + datos.result.nModified);
+
+      res.status(200).redirect("/");
+    })
+    .catch((e) => console.log(e));
+};
 
 exports.getfilms = (req, res) => {
   let titulo = req.params.titulo;

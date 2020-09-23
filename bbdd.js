@@ -1,6 +1,7 @@
 //Aquí voy a meter todos los métodos que quiera hacer para consultar a la bbdd
 var MongoClient = require("mongodb").MongoClient;
 var url = "mongodb://localhost:27017";
+var ObjectId = require("mongodb").ObjectId;
 
 //CRUD
 
@@ -59,15 +60,36 @@ exports.getFilmsDetail = async () => {
 
 //Update
 
-exports.setMovie = async (nameOfListing, updatedListing) => {
-  const film = await connect();
-  result = await film
+exports.setMovie = async (id, film) => {
+  console.log("+++++++");
+  console.log(film);
+  console.log(id);
+  const client = await connect();
+  result = await client
     .db("movies")
     .collection("favorites")
-    .updateOne({ name: nameOfListing }, { $set: updatedListing });
+    .updateOne(
+      { _id: ObjectId(id) },
 
-  console.log(`${result.matchedCount} document(s) matched the query criteria.`);
-  console.log(`${result.modifiedCount} document(s) was/were updated.`);
+      {
+        $set: {
+          Title: film.Title,
+          Year: film.Year,
+          Director: film.Director,
+          Actors: film.Actors,
+          Genre: film.Genre,
+          Awards: film.Awards,
+          Runtime: film.Runtime,
+          Poster: film.Poster,
+        },
+      }
+    );
+  if (result) {
+    //console.log("cambios: " + result.nModified);
+    return result;
+  } else {
+    return null;
+  }
 };
 
 //Delete

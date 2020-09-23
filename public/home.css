@@ -17,6 +17,7 @@ h1 {
   margin: 200px;
   margin-top: 5px;
   background-color: rgb(233, 185, 65, 0.7);
+  background-image: image("img/celuloide-01.svg");
 
   padding: 50px;
   display: flex;
