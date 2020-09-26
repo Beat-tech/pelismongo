@@ -2,13 +2,29 @@ html {
   font-family: "Roboto Mono", monospace;
 }
 body {
-  background-color: beige;
+  background-color: white;
+  margin: 0;
+}
+footer {
+  width: 100%;
+  margin: 0;
+  height: 5vh;
+  background-color: rgb(151, 163, 173, 1);
 }
 #h1 {
   /* display: flex; */
 
-  color: rgb(31, 42, 22);
+  color: #343c4c;
   margin-top: 1vh;
+}
+#tit {
+  /* display: flex; */
+
+  color: #343c4c;
+  margin-top: 2vh;
+  margin-left: 1vh;
+  font-size: 30px;
+  font-weight: bolder;
 }
 #titulo {
   display: flex;
@@ -25,7 +41,7 @@ body {
   background-color: rgb(151, 163, 173);
   border-radius: 6px;
   font-family: "Roboto Mono", monospace;
-  color: rgb(31, 42, 22);
+  color: #343c4c;
   border-style: none;
   margin-left: 290px;
   margin-right: 240px;
@@ -36,10 +52,10 @@ body {
   margin-right: 100px;
   padding: 10px;
 
-  background-color: rgb(31, 42, 22, 0.5);
+  background-color: lightgray;
 
   font-family: "Roboto Mono", monospace;
-  color: rgb(31, 42, 22);
+  color: #343c4c;
   border-style: none;
   height: 17px;
   margin-top: 3vh;
@@ -50,7 +66,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: rgb(31, 42, 22, 0.5);
+  background-color: lightgray;
   padding: 10px;
   width: 480px;
   margin-top: 3vh;
@@ -66,10 +82,11 @@ body {
   background-color: rgb(233, 185, 65, 0.7);
   width: 70vh;
   text-align: center;
-  padding-bottom: 10px;
+  padding-bottom: 40px;
   padding-top: 40px;
-  margin-left: 30vw;
+  margin-left: 34vw;
   margin-top: 2vh;
+  margin-bottom: 2vh;
 }
 
 #botonesmovie {
@@ -86,7 +103,7 @@ body {
   border-radius: 4px;
 
   font-family: "Roboto Mono", monospace;
-  color: rgb(31, 42, 22);
+  color: #343c4c;
   display: flex;
   margin-top: 30px;
   margin-bottom: 60px;
@@ -95,4 +112,55 @@ body {
 
 #id {
   display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  div#div {
+    margin: 0;
+    margin-left: 0px;
+    margin-top: 0px;
+    width: 100vw;
+    height: 100vh;
+    padding-left: 0px;
+    padding-top: 0.5vh;
+    border-radius: 0px;
+    background-color: lightgray;
+    font-size: smaller;
+  }
+
+  #poster {
+    width: 200px;
+    height: auto;
+  }
+  #titulo {
+    margin-left: 2vw;
+  }
+  h1 {
+    font-size: 15px;
+  }
+  /* h6 {
+    display: none;
+  } */
+  #peticion {
+    width: 120px;
+    height: 24px;
+    margin: auto;
+    margin-top: 20px;
+    margin-left: 30px;
+  }
+  #boton {
+    height: 4px;
+    margin-top: 20px;
+  }
+  #boton2 {
+    margin-left: 30px;
+    font-size: xx-small;
+    margin-top: -7vh;
+  }
+  #tit {
+    font-size: 15px;
+  }
+  #boton3 {
+    margin-left: 180px;
+  }
 }
