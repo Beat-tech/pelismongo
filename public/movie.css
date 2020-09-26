@@ -2,16 +2,74 @@ html {
   font-family: "Roboto Mono", monospace;
 }
 body {
-  background-color: lightslategray;
+  background-color: beige;
+}
+#h1 {
+  /* display: flex; */
+
+  color: rgb(31, 42, 22);
+  margin-top: 1vh;
+}
+#titulo {
+  display: flex;
+  flex-direction: row;
+  /* background-color: rgb(190, 165, 165); */
+  margin-left: 200px;
+  border-radius: 6px;
+  width: 77.2vw;
+}
+#imgcamera {
+  width: 72px;
+}
+#boton2 {
+  background-color: rgb(151, 163, 173);
+  border-radius: 6px;
+  font-family: "Roboto Mono", monospace;
+  color: rgb(31, 42, 22);
+  border-style: none;
+  margin-left: 290px;
+  margin-right: 240px;
+  margin-top: -70px;
+  padding: 10px;
+}
+#boton {
+  margin-right: 100px;
+  padding: 10px;
+
+  background-color: rgb(31, 42, 22, 0.5);
+
+  font-family: "Roboto Mono", monospace;
+  color: rgb(31, 42, 22);
+  border-style: none;
+  height: 17px;
+  margin-top: 3vh;
 }
 
+#peticion {
+  border-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(31, 42, 22, 0.5);
+  padding: 10px;
+  width: 480px;
+  margin-top: 3vh;
+}
+#nav {
+  background-color: rgb(151, 163, 173);
+  margin: 0;
+  display: flex;
+  height: 10vh;
+  width: 100vw;
+}
 #div {
-  background-color: rgb(233, 185, 65);
+  background-color: rgb(233, 185, 65, 0.7);
   width: 70vh;
   text-align: center;
   padding-bottom: 10px;
   padding-top: 40px;
   margin-left: 30vw;
+  margin-top: 2vh;
 }
 
 #botonesmovie {
@@ -26,26 +84,15 @@ body {
   width: 80px;
   height: 30px;
   border-radius: 4px;
-  margin: 7px;
+
   font-family: "Roboto Mono", monospace;
   color: rgb(31, 42, 22);
   display: flex;
-  margin-left: 100px;
-  margin-top: 40px;
+  margin-top: 30px;
   margin-bottom: 60px;
+  margin-left: 16vw;
 }
 
-#botonHome {
-  border-style: none;
-  background-color: rosybrown;
-  width: 80px;
-  height: 30px;
-  border-radius: 4px;
-  margin: 7px;
-  font-family: "Roboto Mono", monospace;
-  color: rgb(31, 42, 22);
-  display: flex;
-  margin-left: 170px;
-  margin-top: 40px;
-  margin-bottom: 60px;
+#id {
+  display: none;
 }

@@ -1,11 +1,10 @@
-let arr2 = [];
-document.getElementById("boton3").addEventListener("click", guardar);
-
 function home() {
   location.replace("/");
 }
+document.getElementById("imgcamera").addEventListener("click", home);
 
-document.getElementById("botonHome").addEventListener("click", home);
+let arr2 = [];
+document.getElementById("boton3").addEventListener("click", guardar);
 let nuevaPelicula2 = {
   Title: document.getElementsByTagName("h1")[0].innerText,
   Year: document.getElementsByTagName("h2")[0].innerText,

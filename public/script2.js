@@ -14,3 +14,8 @@ document.getElementById("submit").onclick = () => {
 
   localStorage.setItem("Películas", JSON.stringify(arr));
 };
+
+function home() {
+  location.replace("/");
+}
+document.getElementById("imgcamera").addEventListener("click", home);

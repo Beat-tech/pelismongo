@@ -1,7 +1,6 @@
 //Aquí voy a meter todos los métodos que quiera hacer para consultar a la bbdd
-var MongoClient = require("mongodb").MongoClient;
+var { MongoClient, ObjectId } = require("mongodb");
 var url = "mongodb://localhost:27017";
-var ObjectId = require("mongodb").ObjectId;
 
 //CRUD
 
@@ -26,6 +25,15 @@ exports.createMovie = async (newListing) => {
   console.log(
     `New listing created with the following id: ${result.insertedId}`
   );
+  if (result) {
+    console.log(
+      `Found a listing in the collection with the name '${newListing}':`
+    );
+    return result;
+  } else {
+    console.log(`No listings found with the name '${newListing}'`);
+    return null;
+  }
 };
 
 //Read
@@ -101,4 +109,13 @@ exports.deleteMovie = async (nameOfListing) => {
     .collection("favorites")
     .deleteOne({ Title: nameOfListing });
   console.log(`${result.deletedCount} document(s) was/were deleted.`);
+  if (result) {
+    console.log(
+      `Found a listing in the collection with the name '${nameOfListing}':`
+    );
+    return result;
+  } else {
+    console.log(`No listings found with the name '${nameOfListing}'`);
+    return null;
+  }
 };

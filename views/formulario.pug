@@ -5,24 +5,38 @@ html(lang='en')
     link(rel='shortcut icon', href='../img/cine.svg', type='image/x-icon')
     link(rel="stylesheet", href="formulario.css")
   body
+    div#nav
+      div#titulo
+        input(type="image", src="img/ar-camera.png", id="imgcamera")
+        p#tit Pelis favos
+      div#cabecero
+        input(type="text" id="peticion") 
+        br 
+        br
+      div#botones
+        input(type="image", src= "img/lupa.png", id="boton")
+        br
+        br
+        input(type="button", value="Añadir película>>" id="boton2")
+
     h1.titulo Datos de la peli 
       img(src="img/palomitas-de-maiz.png", id="imgCamara") 
     form#login(action= rutaPost method="POST")
       div#data
-        label _id: 
-        input#title(type='text', name= "id", placeholder='' value=id)
+        label#label _id
+        input#id(type='text', name= "id", value=id)
         br
         br
         label Título: 
-        input#title(type='text', name= "Title", placeholder='' value=Title)
+        input#title(type='text', name= "Title", placeholder='' value=Title required)
         br
         br
         label  Director:
-        input#director(type='text', name= "Director", placeholder='' value=Director)
+        input#director(type='text', name= "Director", placeholder='' value=Director required)
         br
         br
         label  Año de estreno:
-        input#year(type='number', name= "Year", placeholder='' value=Year)
+        input#year(type='number' min= 1912 max= 2021, name= "Year", placeholder='' value=Year required)
         br
         br
         label  Actores:
@@ -42,7 +56,7 @@ html(lang='en')
         br
         br
         label  Poster:
-        input#director(type='img', name= "Poster", placeholder='' src= "")
+        input#poster(type='img', name= "Poster", placeholder='' src= "" value=Poster)
         br
         br
         input#submit(type='submit' value="Guardar")

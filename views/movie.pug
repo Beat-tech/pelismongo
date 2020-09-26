@@ -5,6 +5,19 @@ html
     link(rel='shortcut icon', href='../img/cine.svg', type='image/x-icon')
     link(rel="stylesheet", href="movie.css")
   body
+    div#nav
+      div#titulo
+        input(type="image", src="img/ar-camera.png", id="imgcamera")
+        h1#h1= hache1
+      div#cabecero
+        input(type="text" id="peticion") 
+        br 
+        br
+      div#botones
+        input(type="image", src= "img/lupa.png", id="boton")
+        br
+        br
+        input(type="button", value="Añadir película>>" id="boton2")
   div#div
     h1= Title
     h2= Year
@@ -14,7 +27,9 @@ html
     h5= Awards
     h6= Genre
     h7= Runtime
+    p#id= id
     div#botonesmovie
-      input(type="button", value="Home" id="botonHome")
+    if !id
       input(type="button", value="Guardar" id="boton3")
+      
     script(type="text/javascript" src="./scriptfavs.js")

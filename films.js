@@ -21,23 +21,23 @@ exports.saveFilm = (req, res) => {
 };
 
 exports.deleteFilm = (req, res) => {
-  console.log("borrao");
   var peli = req.body.title;
   bbdd
     .deleteMovie(peli)
     .then((datos) => {
-      console.log(datos);
       res.send();
     })
     .catch((e) => console.log(e));
 };
 
+// quiero decirle en el pug que if no id que me muestre el botón guardar
 exports.getDetail = (req, res) => {
   var peli = req.params.titulo;
   bbdd
     .getMovie(peli)
     .then((datos) => {
       res.render("movie.pug", {
+        hache1: "Pelis favos",
         Title: datos.Title,
         Year: datos.Year,
         Director: datos.Director,
@@ -46,6 +46,7 @@ exports.getDetail = (req, res) => {
         Awards: datos.Awards,
         Runtime: datos.Runtime,
         Poster: datos.Poster,
+        id: datos._id,
       });
     })
     .catch((e) => console.log(e));
@@ -58,6 +59,7 @@ exports.edit = (req, res) => {
     .then((datos) => {
       res.render("formulario", {
         rutaPost: "/edit",
+        hache1: "Pelis favos",
         id: datos._id,
         Title: datos.Title,
         Year: datos.Year,
@@ -74,12 +76,10 @@ exports.edit = (req, res) => {
 
 exports.postUpdate = (req, res) => {
   var id = req.body.id;
-  console.log(id);
+
   bbdd
     .setMovie(id, req.body)
     .then((datos) => {
-      console.log("documentos cambiados: " + datos.result.nModified);
-
       res.status(200).redirect("/");
     })
     .catch((e) => console.log(e));
@@ -93,6 +93,7 @@ exports.getfilms = (req, res) => {
     })
     .then(function (data) {
       res.render("movie.pug", {
+        hache1: "Pelis favos",
         Title: data.Title,
         Year: data.Year,
         Director: data.Director,
@@ -102,8 +103,7 @@ exports.getfilms = (req, res) => {
         Awards: data.Awards,
         Runtime: data.Runtime,
       });
-      // console.log(response);
-      //   console.log("La película es = ", data.title);
+
       res.end();
     });
 };
