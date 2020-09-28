@@ -80,11 +80,13 @@ footer {
 }
 #div {
   background-color: rgb(233, 185, 65, 0.7);
+  /* background-color: #ebcb4c; */
+  /* background-color: lightgray; */
   width: 70vh;
   text-align: center;
   padding-bottom: 40px;
   padding-top: 40px;
-  margin-left: 34vw;
+  margin-left: 35vw;
   margin-top: 2vh;
   margin-bottom: 2vh;
 }
@@ -97,17 +99,20 @@ footer {
 
 #boton3 {
   border-style: none;
-  background-color: rosybrown;
+  /* background-color: rosybrown; */
+  /* background-color: #7484bc; */
+  /* background-color: lightgray; */
   width: 80px;
   height: 30px;
   border-radius: 4px;
 
   font-family: "Roboto Mono", monospace;
+  /* color: lightgray; */
   color: #343c4c;
   display: flex;
   margin-top: 30px;
   margin-bottom: 60px;
-  margin-left: 16vw;
+  margin-left: 14.5vw;
 }
 
 #id {
@@ -161,6 +166,6 @@ footer {
     font-size: 15px;
   }
   #boton3 {
-    margin-left: 180px;
+    margin-left: 195px;
   }
 }

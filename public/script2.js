@@ -19,3 +19,17 @@ function home() {
   location.replace("/");
 }
 document.getElementById("imgcamera").addEventListener("click", home);
+
+function redireccionar() {
+  let peli = document.getElementById("peticion");
+  console.log(peli.value);
+  location.replace("/film/" + peli.value);
+}
+if (document.getElementById("boton") != null)
+  document.getElementById("boton").addEventListener("click", redireccionar);
+
+function redireccionar2() {
+  location.replace("/formulario");
+}
+if (document.getElementById("boton2") != null)
+  document.getElementById("boton2").addEventListener("click", redireccionar2);
